@@ -1,0 +1,6 @@
+# all __pycache__ folders
+__pycache__/
+.env
+firebase-config.json
+vectorDB/
+venv/
