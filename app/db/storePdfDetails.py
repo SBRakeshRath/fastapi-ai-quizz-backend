@@ -62,6 +62,7 @@ def storePdfTranscriptInVectorDB(pdf_text):
             documents=chunks,
             embedding=embed_model,
             namespace=db_collection_name,
+            batch_size=10,
         )
         
         print(f"PDF transcript stored in Pinecone vector database under namespace: {db_collection_name}")  # Debugging statement
