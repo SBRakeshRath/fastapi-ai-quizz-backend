@@ -204,14 +204,6 @@
         "documentation": {}
     },
     {
-        "label": "Chroma",
-        "importPath": "langchain_community.vectorstores",
-        "description": "langchain_community.vectorstores",
-        "isExtraImport": true,
-        "detail": "langchain_community.vectorstores",
-        "documentation": {}
-    },
-    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -715,7 +707,7 @@
         "kind": 2,
         "importPath": "app.db.storePdfDetails",
         "description": "app.db.storePdfDetails",
-        "peekOfCode": "def storePdfTranscriptInVectorDB(pdf_text):\n    try:\n        textSplitter = RecursiveCharacterTextSplitter(\n            chunk_size=1000, chunk_overlap=100\n        )\n        splitter = textSplitter.split_text(pdf_text)\n        chunks = [Document(page_content=chunk) for chunk in splitter]\n        db_collection_name = \"pdf_transcripts_\" + str(int(time.time()))\n        # store the text in firestore\n        firebase_db.collection(\"pdf_transcripts\").add(",
+        "peekOfCode": "def storePdfTranscriptInVectorDB(pdf_text):\n    try:\n        textSplitter = RecursiveCharacterTextSplitter(\n            chunk_size=1000, chunk_overlap=100\n        )\n        print(\"Splitting PDF text into chunks...\")  # Debugging statement\n        splitter = textSplitter.split_text(pdf_text)\n        print(f\"PDF text split into {len(splitter)} chunks.\")  # Debugging statement\n        chunks = [Document(page_content=chunk) for chunk in splitter]\n        print(\"PDF text chunks created as Document objects.\")  # Debugging statement",
         "detail": "app.db.storePdfDetails",
         "documentation": {}
     },

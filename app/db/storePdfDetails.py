@@ -5,9 +5,7 @@ from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from app.config.firebaseConfig import firebase_db
 from app.config.aiConfig import embed_model
-import os
 from dotenv import load_dotenv
-from langchain_community.vectorstores import Chroma
 
 
 load_dotenv()
@@ -22,11 +20,18 @@ def storePdfTranscriptInVectorDB(pdf_text):
         textSplitter = RecursiveCharacterTextSplitter(
             chunk_size=1000, chunk_overlap=100
         )
+        
+        print("Splitting PDF text into chunks...")  # Debugging statement
 
         splitter = textSplitter.split_text(pdf_text)
+        
+        print(f"PDF text split into {len(splitter)} chunks.")  # Debugging statement
         chunks = [Document(page_content=chunk) for chunk in splitter]
         
+        print("PDF text chunks created as Document objects.")  # Debugging statement
         db_collection_name = "pdf_transcripts_" + str(int(time.time()))
+        
+        print(f"Storing PDF transcript in Firestore collection: {db_collection_name}")  # Debugging statement
 
         # store the text in firestore
         firebase_db.collection("pdf_transcripts").add(
@@ -37,13 +42,7 @@ def storePdfTranscriptInVectorDB(pdf_text):
             }
         )
 
-        # 3. store in the vector database
-        # vectorDB = Chroma.from_texts(
-        #     texts=chunks,
-        #     embedding=embed_model,
-        #     collection_name=db_collection_name,
-        #     persist_directory="./vectorDB",
-        # )
+        print(f"PDF transcript stored in Firestore collection: {db_collection_name}")  # Debugging statement
         
         
         vectorDB = PineconeVectorStore.from_documents(
