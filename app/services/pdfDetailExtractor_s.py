@@ -2,9 +2,10 @@ from pypdf import PdfReader
 from fastapi import File
 
 
-def getTextFromPDF (file: File):
+def getTextFromPDF (file: str):
     try:
-        reader = PdfReader(file.file)
+        
+        reader = PdfReader(file)
         
         text = ""
         for page in reader.pages:

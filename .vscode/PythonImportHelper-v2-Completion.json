@@ -484,6 +484,15 @@
         "documentation": {}
     },
     {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
         "label": "VideoDetailsInput",
         "importPath": "app.model.youtubeVideoDetails_input",
         "description": "app.model.youtubeVideoDetails_input",
@@ -778,7 +787,7 @@
         "kind": 2,
         "importPath": "app.routes.fetchPdfDetails_route",
         "description": "app.routes.fetchPdfDetails_route",
-        "peekOfCode": "def fetch_pdf_details(file: UploadFile):\n    if file.content_type != \"application/pdf\":\n        return {\n            \"error\": \"Invalid file type. Please upload a PDF file.\",\n            \"status\": \"error\",\n        }\n    pdfText = getTextFromPDF(file)\n    if pdfText[\"status\"] == \"error\":\n        return {\n            \"error\": pdfText[\"error\"],",
+        "peekOfCode": "def fetch_pdf_details(file: UploadFile):\n    if file.content_type != \"application/pdf\":\n        return {\n            \"error\": \"Invalid file type. Please upload a PDF file.\",\n            \"status\": \"error\",\n        }\n    with tempfile.NamedTemporaryFile(delete=False) as temp_file:\n        temp_file.write(file.file.read())\n        temp_file_path = temp_file.name\n    print(\"Temporary file path:\", temp_file_path)  # Debugging statement",
         "detail": "app.routes.fetchPdfDetails_route",
         "documentation": {}
     },
@@ -787,7 +796,7 @@
         "kind": 5,
         "importPath": "app.routes.fetchPdfDetails_route",
         "description": "app.routes.fetchPdfDetails_route",
-        "peekOfCode": "router = APIRouter()\n@router.post(\"/fetch-pdf-details\",  response_model = PDFDetailsOutput)\ndef fetch_pdf_details(file: UploadFile):\n    if file.content_type != \"application/pdf\":\n        return {\n            \"error\": \"Invalid file type. Please upload a PDF file.\",\n            \"status\": \"error\",\n        }\n    pdfText = getTextFromPDF(file)\n    if pdfText[\"status\"] == \"error\":",
+        "peekOfCode": "router = APIRouter()\n@router.post(\"/fetch-pdf-details\",  response_model = PDFDetailsOutput)\ndef fetch_pdf_details(file: UploadFile):\n    if file.content_type != \"application/pdf\":\n        return {\n            \"error\": \"Invalid file type. Please upload a PDF file.\",\n            \"status\": \"error\",\n        }\n    with tempfile.NamedTemporaryFile(delete=False) as temp_file:\n        temp_file.write(file.file.read())",
         "detail": "app.routes.fetchPdfDetails_route",
         "documentation": {}
     },
@@ -886,7 +895,7 @@
         "kind": 2,
         "importPath": "app.services.pdfDetailExtractor_s",
         "description": "app.services.pdfDetailExtractor_s",
-        "peekOfCode": "def getTextFromPDF (file: File):\n    try:\n        reader = PdfReader(file.file)\n        text = \"\"\n        for page in reader.pages:\n            text += page.extract_text()\n        return {\n            \"text\": text,\n            \"status\": \"success\"\n        }",
+        "peekOfCode": "def getTextFromPDF (file: str):\n    try:\n        reader = PdfReader(file)\n        text = \"\"\n        for page in reader.pages:\n            text += page.extract_text()\n        return {\n            \"text\": text,\n            \"status\": \"success\"\n        }",
         "detail": "app.services.pdfDetailExtractor_s",
         "documentation": {}
     },
