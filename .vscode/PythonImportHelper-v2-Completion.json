@@ -32,6 +32,14 @@
         "documentation": {}
     },
     {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "ChatGoogleGenerativeAI",
         "importPath": "langchain_google_genai",
         "description": "langchain_google_genai",
@@ -87,6 +95,15 @@
         "description": "firebase_admin",
         "isExtraImport": true,
         "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -641,11 +658,20 @@
         "documentation": {}
     },
     {
+        "label": "firebase_credentials_json",
+        "kind": 5,
+        "importPath": "app.config.firebaseConfig",
+        "description": "app.config.firebaseConfig",
+        "peekOfCode": "firebase_credentials_json = os.getenv(\"FIREBASE_SERVICE_ACCOUNT_KEY\")\n# Firebase will automatically handle the PEM formatting inside the JSON file\ncred = credentials.Certificate(json.loads(firebase_credentials_json))\nfirebase_admin.initialize_app(cred)\nfirebase_db = firestore.client()",
+        "detail": "app.config.firebaseConfig",
+        "documentation": {}
+    },
+    {
         "label": "cred",
         "kind": 5,
         "importPath": "app.config.firebaseConfig",
         "description": "app.config.firebaseConfig",
-        "peekOfCode": "cred = credentials.Certificate('C:\\\\Users\\\\KIIT0001\\\\projects\\\\test-yt-ai\\\\backend\\\\firebase-config.json')\nfirebase_admin.initialize_app(cred)\nfirebase_db = firestore.client()",
+        "peekOfCode": "cred = credentials.Certificate(json.loads(firebase_credentials_json))\nfirebase_admin.initialize_app(cred)\nfirebase_db = firestore.client()",
         "detail": "app.config.firebaseConfig",
         "documentation": {}
     },
