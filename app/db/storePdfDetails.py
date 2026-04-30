@@ -5,7 +5,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from app.config.firebaseConfig import firebase_db
 from app.config.aiConfig import embed_model
 from dotenv import load_dotenv
-
+from pinecone import Pinecone
 
 load_dotenv()
 
@@ -43,6 +43,17 @@ def storePdfTranscriptInVectorDB(pdf_text):
 
         print(f"PDF transcript stored in Firestore collection: {db_collection_name}")  # Debugging statement
         
+        api_key = os.getenv("PINECONE_API_KEY")
+        index_name = os.getenv("PINECONE_COLLECTION_NAME")
+
+        if not api_key or not index_name:
+            raise ValueError("Missing Pinecone API Key or Index Name in environment variables!")
+
+        # 3. Explicitly initialize the Pinecone client
+        # This prevents the client from searching the local filesystem for config files
+        pc = Pinecone(api_key=api_key)
+        
+        print(f"Connecting to Pinecone index: {index_name}...")
         
         
         print(f"Storing PDF transcript in Pinecone vector database... on namespace: {db_collection_name} and index: {os.getenv('PINECONE_COLLECTION_NAME')}")  # Debugging statement

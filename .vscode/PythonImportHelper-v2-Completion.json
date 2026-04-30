@@ -204,6 +204,22 @@
         "documentation": {}
     },
     {
+        "label": "Pinecone",
+        "importPath": "pinecone",
+        "description": "pinecone",
+        "isExtraImport": true,
+        "detail": "pinecone",
+        "documentation": {}
+    },
+    {
+        "label": "Pinecone",
+        "importPath": "pinecone",
+        "description": "pinecone",
+        "isExtraImport": true,
+        "detail": "pinecone",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -603,14 +619,6 @@
         "description": "urllib.parse",
         "isExtraImport": true,
         "detail": "urllib.parse",
-        "documentation": {}
-    },
-    {
-        "label": "Pinecone",
-        "importPath": "pinecone",
-        "description": "pinecone",
-        "isExtraImport": true,
-        "detail": "pinecone",
         "documentation": {}
     },
     {
