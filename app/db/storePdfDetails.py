@@ -1,7 +1,6 @@
 import os
 import time
 from langchain_core.documents import Document
-
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from app.config.firebaseConfig import firebase_db
 from app.config.aiConfig import embed_model
@@ -45,17 +44,21 @@ def storePdfTranscriptInVectorDB(pdf_text):
         print(f"PDF transcript stored in Firestore collection: {db_collection_name}")  # Debugging statement
         
         
+        
+        print(f"Storing PDF transcript in Pinecone vector database... on namespace: {db_collection_name} and index: {os.getenv('PINECONE_COLLECTION_NAME')}")  # Debugging statement
         vectorDB = PineconeVectorStore.from_documents(
             index_name=os.getenv("PINECONE_COLLECTION_NAME"),
             documents=chunks,
             embedding=embed_model,
             namespace=db_collection_name,
         )
+        
+        print(f"PDF transcript stored in Pinecone vector database under namespace: {db_collection_name}")  # Debugging statement
 
         return {
             "status": "success",
             "message": "PDF transcript stored in vector database successfully.",
-            "id": vectorDB._namespace,
+            "id": db_collection_name,
         }
     except Exception as e:
         print(f"Error occurred while storing PDF transcript: {e}")
