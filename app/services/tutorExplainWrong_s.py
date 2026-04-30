@@ -13,6 +13,8 @@ def tutor_explain(input):
         if relevant_context["status"] == "error":
             return {"status": "error", "message": "Failed to retrieve relevant context."}
         relevant_context = relevant_context["data"]
+        if relevant_context.strip() == "":
+            return {"status": "error", "message": "No relevant context found for the given question."}
         prompt = wrong_answer_tutor_prompt(input, relevant_context)
         
         response = chat_model.invoke(prompt)
@@ -21,5 +23,6 @@ def tutor_explain(input):
         
         
     except Exception as e:
+        print(f"Error in tutor_explain service: {e}")
         return {"status": "error", "message": str(e)}
         

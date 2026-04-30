@@ -2,11 +2,13 @@ from fastapi import APIRouter
 from app.model.quizes_input import quizzesInput
 from app.services.dbTextExtractor import dbTextExtractor
 from app.services.generateQuiz_s import generateQuizzes
+from app.model.quizes_output import QuizesOutput
+
 
 router = APIRouter()
 
 
-@router.post("/generate-quizzes")
+@router.post("/generate-quizzes", response_model = QuizesOutput)
 def generate_quizzes(data: quizzesInput):
     count = data.num_quizzes
     video_id = data.video_id

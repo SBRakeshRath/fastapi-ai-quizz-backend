@@ -8,6 +8,30 @@
         "documentation": {}
     },
     {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "ChatGoogleGenerativeAI",
         "importPath": "langchain_google_genai",
         "description": "langchain_google_genai",
@@ -106,19 +130,19 @@
         "documentation": {}
     },
     {
-        "label": "Chroma",
-        "importPath": "langchain_community.vectorstores",
-        "description": "langchain_community.vectorstores",
+        "label": "PineconeVectorStore",
+        "importPath": "langchain_pinecone",
+        "description": "langchain_pinecone",
         "isExtraImport": true,
-        "detail": "langchain_community.vectorstores",
+        "detail": "langchain_pinecone",
         "documentation": {}
     },
     {
-        "label": "Chroma",
-        "importPath": "langchain_community.vectorstores",
-        "description": "langchain_community.vectorstores",
+        "label": "PineconeVectorStore",
+        "importPath": "langchain_pinecone",
+        "description": "langchain_pinecone",
         "isExtraImport": true,
-        "detail": "langchain_community.vectorstores",
+        "detail": "langchain_pinecone",
         "documentation": {}
     },
     {
@@ -128,6 +152,14 @@
         "importPath": "time",
         "description": "time",
         "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
+        "importPath": "langchain_core.documents",
+        "description": "langchain_core.documents",
+        "isExtraImport": true,
+        "detail": "langchain_core.documents",
         "documentation": {}
     },
     {
@@ -155,7 +187,31 @@
         "documentation": {}
     },
     {
+        "label": "Chroma",
+        "importPath": "langchain_community.vectorstores",
+        "description": "langchain_community.vectorstores",
+        "isExtraImport": true,
+        "detail": "langchain_community.vectorstores",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -172,6 +228,38 @@
     },
     {
         "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -216,6 +304,70 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "QuizResponse",
+        "importPath": "app.services.generateQuiz_s",
+        "description": "app.services.generateQuiz_s",
+        "isExtraImport": true,
+        "detail": "app.services.generateQuiz_s",
+        "documentation": {}
+    },
+    {
+        "label": "generateQuizzes",
+        "importPath": "app.services.generateQuiz_s",
+        "description": "app.services.generateQuiz_s",
+        "isExtraImport": true,
+        "detail": "app.services.generateQuiz_s",
         "documentation": {}
     },
     {
@@ -307,6 +459,14 @@
         "documentation": {}
     },
     {
+        "label": "PDFDetailsOutput",
+        "importPath": "app.model.pdfDetails_output",
+        "description": "app.model.pdfDetails_output",
+        "isExtraImport": true,
+        "detail": "app.model.pdfDetails_output",
+        "documentation": {}
+    },
+    {
         "label": "VideoDetailsInput",
         "importPath": "app.model.youtubeVideoDetails_input",
         "description": "app.model.youtubeVideoDetails_input",
@@ -339,11 +499,11 @@
         "documentation": {}
     },
     {
-        "label": "generateQuizzes",
-        "importPath": "app.services.generateQuiz_s",
-        "description": "app.services.generateQuiz_s",
+        "label": "QuizesOutput",
+        "importPath": "app.model.quizes_output",
+        "description": "app.model.quizes_output",
         "isExtraImport": true,
-        "detail": "app.services.generateQuiz_s",
+        "detail": "app.model.quizes_output",
         "documentation": {}
     },
     {
@@ -363,19 +523,11 @@
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "TutorExplainOutput",
+        "importPath": "app.model.tutorExplain_output",
+        "description": "app.model.tutorExplain_output",
         "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
+        "detail": "app.model.tutorExplain_output",
         "documentation": {}
     },
     {
@@ -433,6 +585,14 @@
         "description": "urllib.parse",
         "isExtraImport": true,
         "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "Pinecone",
+        "importPath": "pinecone",
+        "description": "pinecone",
+        "isExtraImport": true,
+        "detail": "pinecone",
         "documentation": {}
     },
     {
@@ -503,7 +663,7 @@
         "kind": 2,
         "importPath": "app.db.searchTranscriptFromVectorDB",
         "description": "app.db.searchTranscriptFromVectorDB",
-        "peekOfCode": "def search_transcript_from_vector_db(video_id, relevant_text):\n    try:\n        vectorDB = Chroma(\n            collection_name=video_id,\n            embedding_function=embed_model,\n            persist_directory=\"./vectorDB\",\n        )\n        search_result = vectorDB.similarity_search(relevant_text, k=3)\n        combined_result = \"\\n\\n\".join([doc.page_content for doc in search_result])\n        return {",
+        "peekOfCode": "def search_transcript_from_vector_db(document_id, relevant_text):\n    try:\n        # vectorDB = Chroma(\n        #     collection_name=video_id,\n        #     embedding_function=embed_model,\n        #     persist_directory=\"./vectorDB\",\n        # )\n        vectorDB = PineconeVectorStore.from_existing_index(\n            index_name=os.getenv(\"PINECONE_COLLECTION_NAME\"),\n            embedding=embed_model,",
         "detail": "app.db.searchTranscriptFromVectorDB",
         "documentation": {}
     },
@@ -512,7 +672,7 @@
         "kind": 2,
         "importPath": "app.db.storePdfDetails",
         "description": "app.db.storePdfDetails",
-        "peekOfCode": "def storePdfTranscriptInVectorDB(pdf_text):\n    try:\n        textSplitter = RecursiveCharacterTextSplitter(\n            chunk_size=1000, chunk_overlap=100\n        )\n        chunks = textSplitter.split_text(pdf_text)\n        db_collection_name = \"pdf_transcripts_\" + str(int(time.time()))\n        # store the text in firestore\n        firebase_db.collection(\"pdf_transcripts\").add(\n            {",
+        "peekOfCode": "def storePdfTranscriptInVectorDB(pdf_text):\n    try:\n        textSplitter = RecursiveCharacterTextSplitter(\n            chunk_size=1000, chunk_overlap=100\n        )\n        splitter = textSplitter.split_text(pdf_text)\n        chunks = [Document(page_content=chunk) for chunk in splitter]\n        db_collection_name = \"pdf_transcripts_\" + str(int(time.time()))\n        # store the text in firestore\n        firebase_db.collection(\"pdf_transcripts\").add(",
         "detail": "app.db.storePdfDetails",
         "documentation": {}
     },
@@ -526,6 +686,15 @@
         "documentation": {}
     },
     {
+        "label": "PDFDetailsOutput",
+        "kind": 6,
+        "importPath": "app.model.pdfDetails_output",
+        "description": "app.model.pdfDetails_output",
+        "peekOfCode": "class PDFDetailsOutput(BaseModel):\n    status: str = Field(description=\"The status of the PDF processing, either 'success' or 'error'\")\n    message: Optional[str] = Field(description=\"A message providing additional information about the processing result\", default=None)\n    id: Optional[str] = Field(description=\"The unique identifier for the stored PDF transcript in the vector database\", default=None)\n    error: Optional[str] = Field(description=\"An error message if the processing failed\", default=None)",
+        "detail": "app.model.pdfDetails_output",
+        "documentation": {}
+    },
+    {
         "label": "quizzesInput",
         "kind": 6,
         "importPath": "app.model.quizes_input",
@@ -535,12 +704,30 @@
         "documentation": {}
     },
     {
+        "label": "QuizesOutput",
+        "kind": 6,
+        "importPath": "app.model.quizes_output",
+        "description": "app.model.quizes_output",
+        "peekOfCode": "class QuizesOutput(BaseModel):\n    video_id: Optional[str] = Field(default=None, description=\"The ID of the YouTube video\")\n    num_quizzes: Optional[int] = Field(default=None, description=\"The number of quizzes generated\")\n    quizzes: Optional[QuizResponse] = Field(default=None, description=\"A list of generated quiz questions\")\n    status: str = Field(description=\"The status, either 'success' or 'error'\")\n    error: Optional[str] = Field(default=None, description=\"An error message if it failed\")",
+        "detail": "app.model.quizes_output",
+        "documentation": {}
+    },
+    {
         "label": "TutorExplainInput",
         "kind": 6,
         "importPath": "app.model.tutorExplain_input",
         "description": "app.model.tutorExplain_input",
         "peekOfCode": "class TutorExplainInput(BaseModel):\n    video_id: str\n    question: str\n    user_wrong_answer: str\n    correct_answer: str",
         "detail": "app.model.tutorExplain_input",
+        "documentation": {}
+    },
+    {
+        "label": "TutorExplainOutput",
+        "kind": 6,
+        "importPath": "app.model.tutorExplain_output",
+        "description": "app.model.tutorExplain_output",
+        "peekOfCode": "class TutorExplainOutput(BaseModel):\n    status: str = Field(..., description=\"Status of the explanation request, either 'success' or 'error'.\")\n    explanation: Optional[str] = Field(None, description=\"The generated explanation for the user's wrong answer.\")\n    message: Optional[str] = Field(None, description=\"Error message if the status is 'error'.\")\n    error: Optional[str] = Field(None, description=\"Detailed error information if the status is 'error'.\")",
+        "detail": "app.model.tutorExplain_output",
         "documentation": {}
     },
     {
@@ -566,7 +753,7 @@
         "kind": 5,
         "importPath": "app.routes.fetchPdfDetails_route",
         "description": "app.routes.fetchPdfDetails_route",
-        "peekOfCode": "router = APIRouter()\n@router.post(\"/fetch-pdf-details\")\ndef fetch_pdf_details(file: UploadFile):\n    if file.content_type != \"application/pdf\":\n        return {\n            \"error\": \"Invalid file type. Please upload a PDF file.\",\n            \"status\": \"error\",\n        }\n    pdfText = getTextFromPDF(file)\n    if pdfText[\"status\"] == \"error\":",
+        "peekOfCode": "router = APIRouter()\n@router.post(\"/fetch-pdf-details\",  response_model = PDFDetailsOutput)\ndef fetch_pdf_details(file: UploadFile):\n    if file.content_type != \"application/pdf\":\n        return {\n            \"error\": \"Invalid file type. Please upload a PDF file.\",\n            \"status\": \"error\",\n        }\n    pdfText = getTextFromPDF(file)\n    if pdfText[\"status\"] == \"error\":",
         "detail": "app.routes.fetchPdfDetails_route",
         "documentation": {}
     },
@@ -602,7 +789,7 @@
         "kind": 5,
         "importPath": "app.routes.generateQuizes_route",
         "description": "app.routes.generateQuizes_route",
-        "peekOfCode": "router = APIRouter()\n@router.post(\"/generate-quizzes\")\ndef generate_quizzes(data: quizzesInput):\n    count = data.num_quizzes\n    video_id = data.video_id\n    try:\n        transcript = dbTextExtractor(video_id)\n        if transcript[\"status\"] == \"error\":\n            return {\n                \"error\": transcript[\"message\"],",
+        "peekOfCode": "router = APIRouter()\n@router.post(\"/generate-quizzes\", response_model = QuizesOutput)\ndef generate_quizzes(data: quizzesInput):\n    count = data.num_quizzes\n    video_id = data.video_id\n    try:\n        transcript = dbTextExtractor(video_id)\n        if transcript[\"status\"] == \"error\":\n            return {\n                \"error\": transcript[\"message\"],",
         "detail": "app.routes.generateQuizes_route",
         "documentation": {}
     },
@@ -611,7 +798,7 @@
         "kind": 2,
         "importPath": "app.routes.tutorExplain_route",
         "description": "app.routes.tutorExplain_route",
-        "peekOfCode": "def tutor_explain_route(input: TutorExplainInput):\n    try:\n        result = tutor_explain(input)\n        if result[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"message\": result[\"message\"]}\n        return {\"status\": \"success\", \"explanation\": result[\"explanation\"]}\n    except Exception as e:\n        print(f\"Error in tutor_explain route: {e}\")\n        return {\"status\": \"error\", \"message\": str(e)}",
+        "peekOfCode": "def tutor_explain_route(input: TutorExplainInput):\n    try:\n        result = tutor_explain(input)\n        if result[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"error\": result[\"message\"]}\n        return {\"status\": \"success\", \"explanation\": result[\"explanation\"]}\n    except Exception as e:\n        print(f\"Error in tutor_explain route: {str(e)}\")\n        return {\"status\": \"error\", \"error\": str(e)}",
         "detail": "app.routes.tutorExplain_route",
         "documentation": {}
     },
@@ -620,7 +807,7 @@
         "kind": 5,
         "importPath": "app.routes.tutorExplain_route",
         "description": "app.routes.tutorExplain_route",
-        "peekOfCode": "router = APIRouter()\n@router.post(\"/tutor-explain\")\ndef tutor_explain_route(input: TutorExplainInput):\n    try:\n        result = tutor_explain(input)\n        if result[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"message\": result[\"message\"]}\n        return {\"status\": \"success\", \"explanation\": result[\"explanation\"]}\n    except Exception as e:\n        print(f\"Error in tutor_explain route: {e}\")",
+        "peekOfCode": "router = APIRouter()\n@router.post(\"/tutor-explain\", response_model = TutorExplainOutput)\ndef tutor_explain_route(input: TutorExplainInput):\n    try:\n        result = tutor_explain(input)\n        if result[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"error\": result[\"message\"]}\n        return {\"status\": \"success\", \"explanation\": result[\"explanation\"]}\n    except Exception as e:\n        print(f\"Error in tutor_explain route: {str(e)}\")",
         "detail": "app.routes.tutorExplain_route",
         "documentation": {}
     },
@@ -629,7 +816,7 @@
         "kind": 2,
         "importPath": "app.services.dbTextExtractor",
         "description": "app.services.dbTextExtractor",
-        "peekOfCode": "def dbTextExtractor(collection_id):\n    try:\n        docs = firebase_db.collection(\"pdf_transcripts\").where(\"collection_name\", \"==\", collection_id).stream()\n        for doc in docs:\n            data = doc.to_dict()\n            return {\"status\": \"success\", \"text\": data[\"text\"]}\n    except Exception as e:\n        return {\"status\": \"error\", \"message\": str(e)}",
+        "peekOfCode": "def dbTextExtractor(collection_id):\n    try:\n        docs_generator = firebase_db.collection(\"pdf_transcripts\").where(\"collection_name\", \"==\", collection_id).stream()\n        print(f\"Fetching transcript for video ID: {collection_id}\")\n        docs_list = list(docs_generator)\n        if len(docs_list) == 0:\n            return {\"status\": \"error\", \"message\": \"No transcript found for the given video ID.\"}\n        for doc in docs_list:\n            data = doc.to_dict()\n            return {\"status\": \"success\", \"text\": data[\"text\"]}",
         "detail": "app.services.dbTextExtractor",
         "documentation": {}
     },
@@ -674,7 +861,7 @@
         "kind": 2,
         "importPath": "app.services.tutorExplainWrong_s",
         "description": "app.services.tutorExplainWrong_s",
-        "peekOfCode": "def tutor_explain(input):\n    try:\n        relevant_context = search_transcript_from_vector_db(input.video_id, input.question)\n        print(\"Relevant context retrieved:\", relevant_context)\n        if relevant_context[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"message\": \"Failed to retrieve relevant context.\"}\n        relevant_context = relevant_context[\"data\"]\n        prompt = wrong_answer_tutor_prompt(input, relevant_context)\n        response = chat_model.invoke(prompt)\n        return {\"status\": \"success\", \"explanation\": response.content}",
+        "peekOfCode": "def tutor_explain(input):\n    try:\n        relevant_context = search_transcript_from_vector_db(input.video_id, input.question)\n        print(\"Relevant context retrieved:\", relevant_context)\n        if relevant_context[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"message\": \"Failed to retrieve relevant context.\"}\n        relevant_context = relevant_context[\"data\"]\n        if relevant_context.strip() == \"\":\n            return {\"status\": \"error\", \"message\": \"No relevant context found for the given question.\"}\n        prompt = wrong_answer_tutor_prompt(input, relevant_context)",
         "detail": "app.services.tutorExplainWrong_s",
         "documentation": {}
     },
@@ -706,11 +893,29 @@
         "documentation": {}
     },
     {
+        "label": "PINECONE_API_KEY",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "PINECONE_API_KEY = os.getenv(\"PINECONE_API_KEY\")\nif not PINECONE_API_KEY:\n    raise ValueError(\"PINECONE_API_KEY is not set in the environment variables.\")\npineconeDB = Pinecone(\n    api_key=PINECONE_API_KEY,\n)",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "pineconeDB",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "pineconeDB = Pinecone(\n    api_key=PINECONE_API_KEY,\n)\napp = FastAPI()\n# app.include_router(fetchVideoDetails_route.router)\napp.include_router(fetchPdfDetails_route.router)\napp.include_router(generateQuizes_route.router)\napp.include_router(tutorExplain_route.router)",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.include_router(fetchVideoDetails_route.router)\napp.include_router(fetchPdfDetails_route.router)\napp.include_router(generateQuizes_route.router)\napp.include_router(tutorExplain_route.router)\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}",
+        "peekOfCode": "app = FastAPI()\n# app.include_router(fetchVideoDetails_route.router)\napp.include_router(fetchPdfDetails_route.router)\napp.include_router(generateQuizes_route.router)\napp.include_router(tutorExplain_route.router)\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}",
         "detail": "app.main",
         "documentation": {}
     }
