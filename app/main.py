@@ -4,6 +4,7 @@ import os
 from pinecone import Pinecone
 from pydantic import BaseModel
 from typing import List
+from fastapi.middleware.cors import CORSMiddleware
 # from .routes import fetchVideoDetails_route
 from .routes import fetchPdfDetails_route
 from .routes import generateQuizes_route
@@ -31,13 +32,24 @@ pineconeDB = Pinecone(
 
 
 
-        
 
 
 
 
 
 app = FastAPI()
+
+
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+)
+
 # app.include_router(fetchVideoDetails_route.router)
 app.include_router(fetchPdfDetails_route.router)
 app.include_router(generateQuizes_route.router)

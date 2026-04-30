@@ -613,6 +613,14 @@
         "documentation": {}
     },
     {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
         "label": "generate_quiz_prompt",
         "kind": 2,
         "importPath": "app.AI.generateQuizPrompt",
@@ -923,7 +931,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "PINECONE_API_KEY = os.getenv(\"PINECONE_API_KEY\")\nif not PINECONE_API_KEY:\n    raise ValueError(\"PINECONE_API_KEY is not set in the environment variables.\")\npineconeDB = Pinecone(\n    api_key=PINECONE_API_KEY,\n)",
+        "peekOfCode": "PINECONE_API_KEY = os.getenv(\"PINECONE_API_KEY\")\nif not PINECONE_API_KEY:\n    raise ValueError(\"PINECONE_API_KEY is not set in the environment variables.\")\npineconeDB = Pinecone(\n    api_key=PINECONE_API_KEY,\n)\napp = FastAPI()",
         "detail": "app.main",
         "documentation": {}
     },
@@ -932,7 +940,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "pineconeDB = Pinecone(\n    api_key=PINECONE_API_KEY,\n)\napp = FastAPI()\n# app.include_router(fetchVideoDetails_route.router)\napp.include_router(fetchPdfDetails_route.router)\napp.include_router(generateQuizes_route.router)\napp.include_router(tutorExplain_route.router)",
+        "peekOfCode": "pineconeDB = Pinecone(\n    api_key=PINECONE_API_KEY,\n)\napp = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"*\"],  # Allow all origins",
         "detail": "app.main",
         "documentation": {}
     },
@@ -941,7 +949,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n# app.include_router(fetchVideoDetails_route.router)\napp.include_router(fetchPdfDetails_route.router)\napp.include_router(generateQuizes_route.router)\napp.include_router(tutorExplain_route.router)\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"*\"],  # Allow all origins\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# app.include_router(fetchVideoDetails_route.router)\napp.include_router(fetchPdfDetails_route.router)",
         "detail": "app.main",
         "documentation": {}
     }
