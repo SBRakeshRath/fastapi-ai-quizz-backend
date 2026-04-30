@@ -155,14 +155,6 @@
         "documentation": {}
     },
     {
-        "label": "PineconeVectorStore",
-        "importPath": "langchain_pinecone",
-        "description": "langchain_pinecone",
-        "isExtraImport": true,
-        "detail": "langchain_pinecone",
-        "documentation": {}
-    },
-    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -172,11 +164,12 @@
         "documentation": {}
     },
     {
-        "label": "Document",
-        "importPath": "langchain_core.documents",
-        "description": "langchain_core.documents",
+        "label": "uuid",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "langchain_core.documents",
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -188,22 +181,6 @@
         "documentation": {}
     },
     {
-        "label": "firebase_db",
-        "importPath": "app.config.firebaseConfig",
-        "description": "app.config.firebaseConfig",
-        "isExtraImport": true,
-        "detail": "app.config.firebaseConfig",
-        "documentation": {}
-    },
-    {
-        "label": "firebase_db",
-        "importPath": "app.config.firebaseConfig",
-        "description": "app.config.firebaseConfig",
-        "isExtraImport": true,
-        "detail": "app.config.firebaseConfig",
-        "documentation": {}
-    },
-    {
         "label": "Pinecone",
         "importPath": "pinecone",
         "description": "pinecone",
@@ -217,6 +194,22 @@
         "description": "pinecone",
         "isExtraImport": true,
         "detail": "pinecone",
+        "documentation": {}
+    },
+    {
+        "label": "firebase_db",
+        "importPath": "app.config.firebaseConfig",
+        "description": "app.config.firebaseConfig",
+        "isExtraImport": true,
+        "detail": "app.config.firebaseConfig",
+        "documentation": {}
+    },
+    {
+        "label": "firebase_db",
+        "importPath": "app.config.firebaseConfig",
+        "description": "app.config.firebaseConfig",
+        "isExtraImport": true,
+        "detail": "app.config.firebaseConfig",
         "documentation": {}
     },
     {
@@ -715,7 +708,7 @@
         "kind": 2,
         "importPath": "app.db.storePdfDetails",
         "description": "app.db.storePdfDetails",
-        "peekOfCode": "def storePdfTranscriptInVectorDB(pdf_text):\n    try:\n        textSplitter = RecursiveCharacterTextSplitter(\n            chunk_size=1000, chunk_overlap=100\n        )\n        print(\"Splitting PDF text into chunks...\")  # Debugging statement\n        splitter = textSplitter.split_text(pdf_text)\n        print(f\"PDF text split into {len(splitter)} chunks.\")  # Debugging statement\n        chunks = [Document(page_content=chunk) for chunk in splitter]\n        print(\"PDF text chunks created as Document objects.\")  # Debugging statement",
+        "peekOfCode": "def storePdfTranscriptInVectorDB(pdf_text):\n    try:\n        # 1. Chunking (Standard)\n        textSplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\n        chunks = textSplitter.split_text(pdf_text)\n        db_collection_name = \"pdf_transcripts_\" + str(int(time.time()))\n        # 2. Store in Firestore (Confirmed Working)\n        firebase_db.collection(\"pdf_transcripts\").add({\n            \"collection_name\": db_collection_name,\n            \"text\": pdf_text,",
         "detail": "app.db.storePdfDetails",
         "documentation": {}
     },
