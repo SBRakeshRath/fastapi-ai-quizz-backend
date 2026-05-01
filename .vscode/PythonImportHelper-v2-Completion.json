@@ -645,7 +645,7 @@
         "kind": 5,
         "importPath": "app.config.aiConfig",
         "description": "app.config.aiConfig",
-        "peekOfCode": "api_key = os.getenv(\"GEMINI_API_KEY\")\nif not api_key:\n    raise ValueError(\"GEMINI_API_KEY is not set in the environment variables.\")\nembed_model = GoogleGenerativeAIEmbeddings(\n    model=\"models/gemini-embedding-001\", google_api_key=api_key\n)\nchat_model = ChatGoogleGenerativeAI(\n    model=\"models/gemini-3.1-flash-lite\", google_api_key=api_key\n)",
+        "peekOfCode": "api_key = os.getenv(\"GEMINI_API_KEY\")\nif not api_key:\n    raise ValueError(\"GEMINI_API_KEY is not set in the environment variables.\")\nembed_model = GoogleGenerativeAIEmbeddings(\n    model=\"models/gemini-embedding-001\", google_api_key=api_key\n)\nchat_model = ChatGoogleGenerativeAI(\n    model=\"models/gemini-3.1-flash-lite-preview\", google_api_key=api_key\n)",
         "detail": "app.config.aiConfig",
         "documentation": {}
     },
@@ -654,7 +654,7 @@
         "kind": 5,
         "importPath": "app.config.aiConfig",
         "description": "app.config.aiConfig",
-        "peekOfCode": "embed_model = GoogleGenerativeAIEmbeddings(\n    model=\"models/gemini-embedding-001\", google_api_key=api_key\n)\nchat_model = ChatGoogleGenerativeAI(\n    model=\"models/gemini-3.1-flash-lite\", google_api_key=api_key\n)",
+        "peekOfCode": "embed_model = GoogleGenerativeAIEmbeddings(\n    model=\"models/gemini-embedding-001\", google_api_key=api_key\n)\nchat_model = ChatGoogleGenerativeAI(\n    model=\"models/gemini-3.1-flash-lite-preview\", google_api_key=api_key\n)",
         "detail": "app.config.aiConfig",
         "documentation": {}
     },
@@ -663,7 +663,7 @@
         "kind": 5,
         "importPath": "app.config.aiConfig",
         "description": "app.config.aiConfig",
-        "peekOfCode": "chat_model = ChatGoogleGenerativeAI(\n    model=\"models/gemini-3.1-flash-lite\", google_api_key=api_key\n)",
+        "peekOfCode": "chat_model = ChatGoogleGenerativeAI(\n    model=\"models/gemini-3.1-flash-lite-preview\", google_api_key=api_key\n)",
         "detail": "app.config.aiConfig",
         "documentation": {}
     },

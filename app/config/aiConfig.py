@@ -17,5 +17,5 @@ embed_model = GoogleGenerativeAIEmbeddings(
 
 
 chat_model = ChatGoogleGenerativeAI(
-    model="models/gemini-3.1-flash-lite", google_api_key=api_key
+    model="models/gemini-3.1-flash-lite-preview", google_api_key=api_key
 )
