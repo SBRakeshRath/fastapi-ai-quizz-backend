@@ -325,6 +325,22 @@
         "documentation": {}
     },
     {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "Optional",
         "importPath": "typing",
         "description": "typing",
@@ -834,7 +850,7 @@
         "kind": 2,
         "importPath": "app.routes.tutorExplain_route",
         "description": "app.routes.tutorExplain_route",
-        "peekOfCode": "def tutor_explain_route(input: TutorExplainInput):\n    try:\n        result = tutor_explain(input)\n        if result[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"error\": result[\"message\"]}\n        return {\"status\": \"success\", \"explanation\": result[\"explanation\"]}\n    except Exception as e:\n        print(f\"Error in tutor_explain route: {str(e)}\")\n        return {\"status\": \"error\", \"error\": str(e)}",
+        "peekOfCode": "def tutor_explain_route(input: TutorExplainInput):\n    try:\n        result = tutor_explain(input)\n        print(result)\n        if result[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"error\": result[\"message\"]}\n        return {\"status\": \"success\", \"explanation\": result[\"explanation\"][\"explanation\"]}\n    except Exception as e:\n        print(f\"Error in tutor_explain route: {str(e)}\")\n        return {\"status\": \"error\", \"error\": str(e)}",
         "detail": "app.routes.tutorExplain_route",
         "documentation": {}
     },
@@ -843,7 +859,7 @@
         "kind": 5,
         "importPath": "app.routes.tutorExplain_route",
         "description": "app.routes.tutorExplain_route",
-        "peekOfCode": "router = APIRouter()\n@router.post(\"/tutor-explain\", response_model = TutorExplainOutput)\ndef tutor_explain_route(input: TutorExplainInput):\n    try:\n        result = tutor_explain(input)\n        if result[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"error\": result[\"message\"]}\n        return {\"status\": \"success\", \"explanation\": result[\"explanation\"]}\n    except Exception as e:\n        print(f\"Error in tutor_explain route: {str(e)}\")",
+        "peekOfCode": "router = APIRouter()\n@router.post(\"/tutor-explain\", response_model = TutorExplainOutput)\ndef tutor_explain_route(input: TutorExplainInput):\n    try:\n        result = tutor_explain(input)\n        print(result)\n        if result[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"error\": result[\"message\"]}\n        return {\"status\": \"success\", \"explanation\": result[\"explanation\"][\"explanation\"]}\n    except Exception as e:",
         "detail": "app.routes.tutorExplain_route",
         "documentation": {}
     },
@@ -890,6 +906,15 @@
         "description": "app.services.pdfDetailExtractor_s",
         "peekOfCode": "def getTextFromPDF (file: str):\n    try:\n        reader = PdfReader(file)\n        text = \"\"\n        for page in reader.pages:\n            text += page.extract_text()\n        return {\n            \"text\": text,\n            \"status\": \"success\"\n        }",
         "detail": "app.services.pdfDetailExtractor_s",
+        "documentation": {}
+    },
+    {
+        "label": "TutorExplainChatModelResponse",
+        "kind": 6,
+        "importPath": "app.services.tutorExplainWrong_s",
+        "description": "app.services.tutorExplainWrong_s",
+        "peekOfCode": "class TutorExplainChatModelResponse(BaseModel):\n    explanation: str = Field(description=\"The explanation for the wrong answer based on the relevant context\")\ndef tutor_explain(input):\n    try:\n        relevant_context = search_transcript_from_vector_db(input.video_id, input.question)\n        print(\"Relevant context retrieved:\", relevant_context)\n        if relevant_context[\"status\"] == \"error\":\n            return {\"status\": \"error\", \"message\": \"Failed to retrieve relevant context.\"}\n        relevant_context = relevant_context[\"data\"]\n        if relevant_context.strip() == \"\":",
+        "detail": "app.services.tutorExplainWrong_s",
         "documentation": {}
     },
     {

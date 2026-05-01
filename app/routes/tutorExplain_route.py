@@ -14,9 +14,10 @@ router = APIRouter()
 def tutor_explain_route(input: TutorExplainInput):
     try:
         result = tutor_explain(input)
+        print(result)
         if result["status"] == "error":
             return {"status": "error", "error": result["message"]}
-        return {"status": "success", "explanation": result["explanation"]}
+        return {"status": "success", "explanation": result["explanation"]["explanation"]}
     except Exception as e:
         print(f"Error in tutor_explain route: {str(e)}")
         return {"status": "error", "error": str(e)}
